@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>坦克大战 · Battle City</title>
+  <meta name="description" content="纯前端 Canvas 实现的经典坦克大战：守住基地，消灭全部敌军。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="stage">
+      <div class="screen">
+        <canvas id="game" width="504" height="504" aria-label="坦克大战游戏画面"></canvas>
+        <div id="toast" class="toast"></div>
+        <div id="overlay" class="overlay"></div>
+      </div>
+
+      <div class="touch" id="touch">
+        <div class="dpad">
+          <button class="tbtn up" data-key="arrowup" aria-label="上">▲</button>
+          <button class="tbtn left" data-key="arrowleft" aria-label="左">◀</button>
+          <button class="tbtn down" data-key="arrowdown" aria-label="下">▼</button>
+          <button class="tbtn right" data-key="arrowright" aria-label="右">▶</button>
+        </div>
+        <button class="tbtn fire" data-key=" " aria-label="开火">开火</button>
+      </div>
+    </div>
+
+    <aside class="hud">
+      <div class="hud-title">BATTLE CITY</div>
+
+      <div class="hud-block">
+        <div class="label">剩余敌军</div>
+        <div class="icons" id="enemy-icons"></div>
+      </div>
+
+      <div class="hud-block">
+        <div class="label">生命</div>
+        <div class="icons lives" id="life-icons"></div>
+      </div>
+
+      <div class="hud-grid">
+        <div class="hud-block">
+          <div class="label">关卡</div>
+          <div class="value" id="level">1</div>
+        </div>
+        <div class="hud-block">
+          <div class="label">得分</div>
+          <div class="value" id="score">00000</div>
+        </div>
+      </div>
+
+      <div class="hud-block">
+        <div class="label">最高分</div>
+        <div class="value small" id="best">00000</div>
+      </div>
+
+      <div class="hud-help">
+        <span>WASD / 方向键</span> 移动<br>
+        <span>空格</span> 射击<br>
+        <span>P</span> 暂停 · <span>M</span> 静音
+      </div>
+
+      <button id="mute-btn" class="ghost">声音：开</button>
+    </aside>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
