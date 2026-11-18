@@ -2,6 +2,8 @@
 
 纯前端实现的经典坦克大战。零依赖、零构建，打开 `index.html` 就能玩。
 
+**[▶ 在线试玩 · Play in browser](https://lhz0909.github.io/tank-battle/)**
+
 ![游戏截图](screenshot.png)
 
 ## 玩法
